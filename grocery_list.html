@@ -1,0 +1,108 @@
+<!--Grocery List Page-->
+
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width = device-width, initial-scale=1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+		<title>MEALMATES Grocery List</title>
+		<link rel="stylesheet" href="./MM_Stylesheet.css"/>
+		<script>
+		function allowDrop(ev){
+			ev.preventDefault();
+		}
+		function drag(ev){
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+		function drop(ev){
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			var copy = ev.target;
+			<!--var original = document.getElementById(data);copy.src = original.src;-->
+			if(!copy.classList.contains('dropzone')){
+				copy = ev.target.parentNode;
+				ev.target.remove();
+			}
+			copy.appendChild(document.getElementById(data).cloneNode(true));
+		}
+		</script>
+	</head>
+	<body class = "bg1">
+		<header>
+			<!--This is the block of text for the header and navigation bar for the website-->
+			<img src="Logo.png" alt="Website Logo"/>
+			<div id="nav" style = "margin-left: 0px;">
+			<ul>
+				<li><a href="./Welcome.html">WELCOME</a></li>
+				<li><a href="./recipes.html">RECIPES</a></li>
+				<li><a href="./planner.html">PLANNER</a></li>
+				<li><a href="./grocery_list.html">GROCERY LIST</a></li>
+				<li><a href="./about.html">ABOUT</a></li>
+			</ul>
+			</div>
+		</header>
+		<section>
+		<!--Section for the ingredient images-->
+			<div class="container">
+			<table border="5" cellspacing ="0" align ="center" bgcolor = "white">
+				<tr>
+						<td align = "center" height = "100" width="1000">
+							<br><H2> List of Ingredients</H2></br>
+						</td>
+						
+						<td align = "center" height = "100" width="1000">
+							<br><H2> Grocery List</h2></br>
+						</td>
+				</tr>
+				<tr>
+					<td align= "left">
+					<ul class= "img_UL">
+						<li><img id = "img1" src = "./images/test-Ing.jpg" draggable = "true" ondragstart = "drag(event)" ></img></li>
+						<li><img id = "img2" src = "./images/test-Ing2.jpg" draggable = "true" ondragstart = "drag(event)" ></img></li>
+						<li><img id = "img3" src = "./images/test-Ing3.jpg" draggable = "true" ondragstart = "drag(event)" ></img></li>
+						<li><img id = "img4" src = "./images/test-Ing4.jpg" draggable = "true" ondragstart = "drag(event)" ></img></li>
+						<li><img id = "img5" src = "./images/test-Ing5.png" draggable = "true" ondragstart = "drag(event)" ></img></li>
+					</ul>
+					
+					</td>
+					<td align= "left">
+						<ul class= "img_UL">
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+						</ul>
+						<ul class= "img_UL">
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+						</ul>
+						<ul class= "img_UL">
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+						</ul>
+						<ul class= "img_UL">
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+							<li><div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div></li>
+						</ul>
+						
+					</td>
+				</tr>	
+					
+				</table>
+			</div>
+			 
+			
+		</section>
+	</body>
+</html>

@@ -1,0 +1,193 @@
+<!-- Scheduler Page-->
+
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width = device-width, initial-scale=1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+		<title>MEALMATES Planner</title>
+		<link rel="stylesheet" href="./MM_Stylesheet.css"/>
+		<script>
+		function allowDrop(ev){
+			ev.preventDefault();
+		}
+		function drag(ev){
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+		function drop(ev){
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			var copy = ev.target;
+			<!--var original = document.getElementById(data);copy.src = original.src;-->
+			if(!copy.classList.contains('dropzone')){
+				copy = ev.target.parentNode;
+				ev.target.remove();
+			}
+			copy.appendChild(document.getElementById(data).cloneNode(true));
+		}
+		</script>
+	</head>
+	<body class = "bg1">
+		<header>
+			<!--This is the block of text for the header and navigation bar for the website-->
+			<img src="Logo.png" alt="Website Logo"/>
+			<div id="nav" style = "margin-left: 0px;">
+			<ul>
+				<li><a href="./Welcome.html">WELCOME</a></li>
+				<li><a href="./recipes.html">RECIPES</a></li>
+				<li><a href="./planner.html">PLANNER</a></li>
+				<li><a href="./grocery_list.html">GROCERY LIST</a></li>
+				<li><a href="./about.html">ABOUT</a></li>
+			</ul>
+			</div>
+		</header>
+		<section>
+		<!--Section for the recipe images-->
+			<div class="container">
+				<H2><u> Favorite Recipes </u></H2>
+				<ul class= "img_UL">
+					<li><img id = "img1" src = "./images/testPic.jpg" draggable = "true" ondragstart = "drag(event)" ></img></li>
+				</ul>
+				<ul class= "img_UL">
+					<li><img id = "img2" src = "./images/testPic2.jpg" draggable = "true" ondragstart = "drag(event)" ></img></li>
+				</ul>
+				<ul class= "img_UL">
+					<li><img id = "img3" src = "./images/testPic3.jpg" draggable = "true" ondragstart = "drag(event)" ></img></li>
+				</ul>
+				<ul class= "img_UL">
+					<li><img id = "img3" src = "./images/testPic4.jpg" draggable = "true" ondragstart = "drag(event)" ></img></li>
+				</ul>
+				<ul class= "img_UL">
+					<li><img id = "img3" src = "./images/testPic5.jpg" draggable = "true" ondragstart = "drag(event)" ></img></li>
+				</ul>
+				
+			</div>
+		</section>
+		
+		<section>
+		<!--Section for the weekly planner-->
+			<table border="5" cellspacing ="0" align ="center">
+				<!--Row For days of the week-->
+				<tr bgcolor = "white">
+					<td align="center" height="100" width ="270">
+						<br>
+							<b>SUNDAY</b>
+						</br>
+						
+					</td>
+					<td align="center" height="100" width ="270">
+						<br>
+							<b>MONDAY</b>
+						</br>
+						
+					</td>
+					<td align="center" height="100" width ="270">
+						<br>
+							<b>TUESDAY</b>
+						</br>
+						
+					</td>
+					<td align="center" height="100" width ="270">
+						<br>
+							<b>WEDNESDAY</b>
+						</br>
+						
+					</td>
+					<td align="center" height="100" width ="270">
+						<br>
+							<b>THRUSDAY</b>
+						</br>
+						
+					</td>
+					<td align="center" height="100" width ="270">
+						<br>
+							<b>FRIDAY</b>
+						</br>
+						
+					</td>
+					<td align="center" height="100" width ="270">
+						<br>
+							<b>SATURDAY</b>
+						</br>
+						
+					</td>
+				</tr>
+				
+				<tr bgcolor = "white">
+					<td align="center" height="700" width= "270">
+						<p>Breakfast:</p>
+						<div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Lunch:</p>
+						<div id = "div2" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Dinner:</p>
+						<div id = "div3" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+					</td>
+					<td align="center" height="700" width= "270">
+						<p>Breakfast:</p>
+						<div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Lunch:</p>
+						<div id = "div2" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Dinner:</p>
+						<div id = "div3" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+					</td>
+					<td align="center" height="700" width= "270">
+						<p>Breakfast:</p>
+						<div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Lunch:</p>
+						<div id = "div2" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Dinner:</p>
+						<div id = "div3" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+					</td>
+					<td align="center" height="700" width= "270">
+						<p>Breakfast:</p>
+						<div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Lunch:</p>
+						<div id = "div2" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Dinner:</p>
+						<div id = "div3" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+					</td>
+					<td align="center" height="700" width= "270">
+						<p>Breakfast:</p>
+						<div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Lunch:</p>
+						<div id = "div2" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Dinner:</p>
+						<div id = "div3" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+					</td>
+					<td align="center" height="700" width= "270">
+						<p>Breakfast:</p>
+						<div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Lunch:</p>
+						<div id = "div2" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Dinner:</p>
+						<div id = "div3" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+					</td>
+					<td align="center" height="700" width= "270">
+						<p>Breakfast:</p>
+						<div id = "div1" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Lunch:</p>
+						<div id = "div2" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+						
+						<p>Dinner:</p>
+						<div id = "div3" class = "dropzone" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+					</td>
+				</tr>
+			</table>
+		</section>
+		
+	</body>
+</html>

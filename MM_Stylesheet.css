@@ -1,0 +1,63 @@
+/*MEALMATES Stylesheet*/
+#nav{
+	display: table;
+	margin: 0 auto;
+	text-align: center;
+}
+#nav ul{
+	list-style: none;
+	display:inline-block;
+}
+#nav ul{
+	display:inline;
+}
+#nav li{
+	display: inline;
+}
+#nav a{
+	float: left;
+	padding:0 30px;
+	text-decoration: none;
+	
+}
+header img{
+	height: 80px;
+}
+header{
+	background-color: #eddbc3;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	height:80px;
+	display: flex;
+	align-items: center;
+}
+body{
+		margin-top: 80px;
+}
+#div1, #div2, #div3{
+	width: 150px;
+	height: 150px;
+	padding: 5px;
+	border: 1px solid #aaaaaa;
+}
+#img1{
+	height: 150px;
+	width: 150px;
+}
+div.container{
+	text-align: left;
+}
+ul.img_UL{
+		list-style: none;
+		display: inline-block;
+		text-align: left;
+}
+li img{
+	display: block;
+	
+}
+body.bg1 {
+    background-color: rgb(152, 191, 100);
+  }

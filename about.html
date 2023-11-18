@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie= edge">
+    <script src="About.js" defer></script>
+    <link href="about.css" rel="stylesheet">
+	<link rel="stylesheet1" href="./MM_Stylesheet.css"/>
+    <title>Tabs</title>
+</head>
+<body>
+
+    <header>
+			<!--This is the block of text for the header and navigation bar for the website-->
+			<img src="Logo.png" alt="Website Logo"/>
+			<div id="nav" style = "margin-left: 0px;">
+			<ul>
+				<li><a href="./Welcome.html">WELCOME</a></li>
+				<li><a href="./recipes.html">RECIPES</a></li>
+				<li><a href="./planner.html">PLANNER</a></li>
+				<li><a href="./grocery_list.html">GROCERY LIST</a></li>
+				<li><a href="./about.html">ABOUT</a></li>
+			</ul>
+			</div>
+		</header>
+
+	<div class="tab-content">
+		<div id="home" data-tab-content class="active" >
+		<h1>Home</h1>
+		<p>This is the home</p>
+	</div>
+    <div id="recipes"data-tab-content >
+        <h1>Recipes</h1>
+        <div class="left-column">
+
+
+            <h3>Add Recipe</h3>
+
+            
+
+            <form>
+              <label for="recipe-name">Name:</label>
+              <input type="text" id="recipe-name" required>
+              <br />
+            
+              <label for="recipe-ingredients">Ingredients:</label>
+              <textarea id="recipe-ingredients" rows="5" required></textarea>
+              <br />
+            
+             <label for="recipe-method">Method:</label>
+              <textarea id="recipe-method" rows="5" required></textarea>
+              <br />
+            
+              <button type="submit">Add Recipe</button>
+            </form>
+
+
+
+
+
+
+        </div>
+        <div class="right-column">
+
+            <div class="right-column">
+                <div id="recipe-list"></div>
+                <div id="no-recipes">You have no recipes.</div>
+              </div>
+
+    
+        </div>
+        <p>This is recipes Page where you will be able to create your own recipes or selection one of the ones on our website</p>
+		</div>
+
+
+		<div id="planner" data-tab-content>
+         <h1>Planner</h1>
+         <p>This is planner page</p>
+        </div>
+		<div id="grocery" data-tab-content >
+         <h1>Grocery List</h1>
+         <p>This is the Grocery List Page</p>
+        </div>
+		<div id="about" data-tab-content  >
+        
+		<div class="about-section">
+            <h1>About Us Page</h1>
+            <p>Welcome to MEALMATES! We are a meal plan service that provides our customers with delicious and healthy meals that are customized to their individual dietary needs. 
+
+                We understand that everyone has different dietary needs and our goal is to make sure those needs are met. We offer a variety of meal plans and recipes for breakfast, lunch, dinner, and snacks. We also have special meal plans for those who are vegan, vegetarian, or have special dietary requirements. 
+                
+                Our meal plans are designed to be easy to follow and help our customers stay on track with their diet. We provide nutritional information for each meal so you can make sure you're getting the right balance of nutrients. 
+                
+                We are dedicated to providing the best meal plans to our customers. We take the time to understand each customer's individual needs and create meal plans that are tailored to them. We are constantly looking for new recipes and meal plans to ensure that our customers are getting the most out of their meal plan. 
+                
+                We hope you enjoy your meal plan experience with us and that you find it helpful in reaching your dietary goals. If you have any questions or comments, please don't hesitate to reach out. We would love to hear from you!</p>
+            
+          </div>
+          
+          <h2 style="text-align:center">Our Team</h2>
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <img src="https://pixabay.com/get/g58a89ef59a1d14123327ea5570cfad3f107a885eb0d29c6a00be2f0f52de85917c8ad9376f6aca0b99145e330752d022.svg" alt="Jane" style="width:50%"
+                
+                
+                >
+                <div class="container">
+                  <h2>Jane Doe</h2>
+                  <p class="title">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>jane@example.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="https://as1.ftcdn.net/v2/jpg/05/80/41/30/1000_F_580413009_9Zc2nsK1LWCUnITZeftMwPShhzyXJdmf.webp" alt="Mike" style="width:50%">
+                <div class="container">
+                  <h2>Mike Ross</h2>
+                  <p class="title">Art Director</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>mike@example.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="https://as2.ftcdn.net/v2/jpg/06/03/97/31/1000_F_603973104_EaLsTEAvTlTXPfOGYjJw6jVaLZ1LiwVM.webp" alt="John" style="width:50%">
+                <div class="container">
+                  <h2>John Doe</h2>
+                  <p class="title">Designer</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>john@example.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+
+
+
+
+
+
+  
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+h1 {
+
+
+color:whitesmoke;
+font-weight: bold;
+
+
+}
+
+
+body {
+    background-color: rgb(152, 191, 100);
+  }
+  .welcome-message{
+
+    width: fit-content;
+    margin: 150px auto;
+
+
+  }
+.btn{
+
+    width: 200px;
+    height: 60px;
+    color: beige;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 50px;
+    
+    
+
+}
+
+.btn btn1 span{
+    margin-left: 10px;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+.btn btn1:hover span{
+    width: 30px;
+
+}
+    
+
