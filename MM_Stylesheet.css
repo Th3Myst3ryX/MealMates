@@ -61,3 +61,13 @@ li img{
 body.bg1 {
     background-color: rgb(152, 191, 100);
   }
+  .bg {
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
